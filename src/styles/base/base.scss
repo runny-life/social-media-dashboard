@@ -1,0 +1,44 @@
+@use '../helpers' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  font-family: var(--font-family-base);
+  background-color: var(--bg);
+}
+
+main {
+  flex: 1;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  --container-padding-x: 25px;
+  --container-max-width: 542px;
+
+  max-width: calc(var(--container-max-width) + var(--container-padding-x) * 2);
+  width: 100%;
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+
+  @include desktop {
+    --container-max-width: 1116px;
+  }
+}

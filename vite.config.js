@@ -11,13 +11,6 @@ export default defineConfig({
       '@scripts': path.resolve(__dirname, 'src/scripts'),
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@use '../helpers' as *;`,
-      },
-    },
-  },
   server: {
     open: true,
   },

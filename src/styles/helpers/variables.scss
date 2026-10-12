@@ -1,0 +1,41 @@
+:root {
+  color-scheme: light dark;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-green-500: #1eb589;
+  --color-red-500: #dc414c;
+  --color-red-700: #c4032b;
+  --color-blue-50: #f7f9ff;
+  --color-blue-500: #1da1f2;
+  --color-blue-600: #178ff5;
+  --color-navy-50: #f1f3fa;
+  --color-navy-900: #333a55;
+  --color-navy-950: #252b42;
+  --color-gray-200: #e1e4f0;
+  --color-gray-400: #aeb3cb;
+  --color-gray-600: #848bab;
+  --color-gray-650: #63687d;
+  --color-gray-900: #20222f;
+  --color-gray-950: #1d1f29;
+  --color-gradient-1: linear-gradient(225deg, #df4896 48.77%, #ee877e 99.68%, #fdc366 148.77%);
+  --color-gradient-2: linear-gradient(225deg, #40db82 47.8%, #388fe7 145.82%);
+
+  /* Theme */
+  --bg: light-dark(var(--color-white), var(--color-gray-950));
+  --bg-elev: light-dark(var(--color-blue-50), var(--color-gray-900));
+  --bg-card: light-dark(var(--color-navy-50), var(--color-navy-950));
+  --title: light-dark(var(--color-gray-950), var(--color-white));
+  --title-additional: light-dark(var(--color-gray-650), var(--color-gray-400));
+
+  /* Fonts */
+  --font-family-base: 'Inter', sans-serif;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
