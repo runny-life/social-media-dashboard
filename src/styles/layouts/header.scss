@@ -1,0 +1,43 @@
+@use '../helpers' as *;
+
+.header {
+  min-height: fluid(235px, 244px, 375px, 768px);
+  padding-top: rem(36px);
+  background-color: var(--bg-elev);
+  border-radius: 0 0 20px 20px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24px);
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: fluid(24px, 28px, 375px, 768px);
+    line-height: 1.25;
+    color: var(--title);
+  }
+
+  &__description {
+    font-weight: 700;
+    font-size: rem(14px);
+    line-height: 1.25;
+    color: var(--title-additional);
+  }
+
+  &__line {
+    height: rem(1px);
+    background-color: var(--color-navy-900);
+    border: none;
+
+    @include desktop {
+      display: none;
+    }
+  }
+}
