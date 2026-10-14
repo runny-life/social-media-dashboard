@@ -1,0 +1,30 @@
+@use '../helpers' as *;
+
+.overview {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24px);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(24px);
+    line-height: 1.25;
+    color: var(--color-white);
+  }
+
+  &__list {
+    display: grid;
+    gap: rem(16px);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(32px);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

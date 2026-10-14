@@ -35,6 +35,9 @@ ul {
 
 .content {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: rem(48px);
   top: -46px;
 
   @include tablet {

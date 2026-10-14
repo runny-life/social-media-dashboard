@@ -1,0 +1,58 @@
+@use '../helpers' as *;
+
+.overview-card {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24px);
+  padding: rem(24px);
+  background-color: var(--bg-card);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  @include hover {
+    background-color: var(--bg-card-hover);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(14px);
+    line-height: 1.25;
+    color: var(--color-gray-400);
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__stat-number {
+    font-weight: 700;
+    font-size: rem(32px);
+    line-height: 1.25;
+    color: var(--color-title);
+  }
+
+  &__change {
+    display: flex;
+    align-items: center;
+    gap: rem(8px);
+  }
+
+  &__stat-change {
+    font-weight: 700;
+    font-size: rem(12px);
+    line-height: 1.25;
+    color: var(--color-green-500);
+
+    &--down {
+      color: var(--color-red-500);
+    }
+  }
+}

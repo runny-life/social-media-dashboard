@@ -4,6 +4,8 @@
 /* Components */
 @use './components/toggle-theme';
 @use './components/card-follower';
+@use './components/overview-card';
 /* Layouts */
 @use './layouts/header';
 @use './layouts/stats-followers';
+@use './layouts/overview';
