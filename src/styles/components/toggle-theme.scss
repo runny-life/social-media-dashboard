@@ -1,0 +1,47 @@
+@use '../helpers' as *;
+
+.toggle-theme {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(16px);
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(14px);
+    line-height: 1.25;
+    color: var(--title-additional);
+  }
+
+  &__button {
+    position: relative;
+    display: block;
+    width: var(--toggle-theme-button-width);
+    height: var(--toggle-theme-button-height);
+    padding-inline: var(--toggle-theme-button-padding);
+    background: var(--bg-toggle-theme-button);
+    border-radius: 12px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+
+    @include hover {
+      .toggle-theme__button--icon {
+        background-color: var(--color-navy-900);
+      }
+    }
+
+    &--icon {
+      position: absolute;
+      top: var(--toggle-theme-button-padding);
+      left: var(--toggle-theme-button-padding);
+      width: var(--toggle-theme-button-icon-size);
+      height: var(--toggle-theme-button-icon-size);
+      transform: translateX(var(--toggle-theme-button-icon-travel));
+      background-color: var(--bg-toggle-theme-button-icon);
+      border-radius: 50%;
+      transition:
+        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 0.3s ease;
+    }
+  }
+}
