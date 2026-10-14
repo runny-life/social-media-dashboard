@@ -29,6 +29,10 @@ button {
   cursor: pointer;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .container {
   --container-padding-x: 25px;
   --container-max-width: 542px;
@@ -41,4 +45,8 @@ button {
   @include desktop {
     --container-max-width: 1116px;
   }
+}
+
+.visually-hidden {
+  @include visually-hidden;
 }
