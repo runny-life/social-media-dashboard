@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.stats-followers {
+  &__list {
+    display: grid;
+    gap: rem(24px);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(32px);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

@@ -33,6 +33,19 @@ ul {
   list-style-type: none;
 }
 
+.content {
+  position: relative;
+  top: -46px;
+
+  @include tablet {
+    top: -50px;
+  }
+
+  @include desktop {
+    top: -107px;
+  }
+}
+
 .container {
   --container-padding-x: 25px;
   --container-max-width: 542px;

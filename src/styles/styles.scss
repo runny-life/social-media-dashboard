@@ -3,5 +3,7 @@
 @use './base/base';
 /* Components */
 @use './components/toggle-theme';
+@use './components/card-follower';
 /* Layouts */
 @use './layouts/header';
+@use './layouts/stats-followers';
